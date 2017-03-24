@@ -1,5 +1,4 @@
 import { sanitize } from 'ember-sanitize/utils/sanitize';
-import getOwner from 'ember-getowner-polyfill';
 import Ember from 'ember';
 
 export default Ember.Helper.extend({
@@ -7,7 +6,7 @@ export default Ember.Helper.extend({
     let config, configName = params[1];
     if (configName) {
       //lookup the config
-      config = getOwner(this).lookup('sanitizer:' + configName);
+      config = Ember.getOwner(this).lookup('sanitizer:' + configName);
     }
 
     let sanitized = sanitize(params[0], config);

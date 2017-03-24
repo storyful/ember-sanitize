@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import { sanitize, sanitizeElement } from '../utils/sanitize';
-import getOwner from 'ember-getowner-polyfill';
 
 function loadConfig(container, name) {
   if (!name) { return; }
@@ -14,6 +13,6 @@ export default Ember.Mixin.create({
   },
 
   sanitizeHTML: function(html, configName) {
-    return sanitize(html, loadConfig(getOwner(this), configName));
+    return sanitize(html, loadConfig(Ember.getOwner(this), configName));
   }
 });

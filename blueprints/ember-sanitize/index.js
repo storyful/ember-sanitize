@@ -5,6 +5,5 @@ module.exports = {
     // to us
   },
   afterInstall: function() {
-    return this.addBowerPackageToProject('sanitize.js', '*');
   }
 };
