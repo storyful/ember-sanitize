@@ -1,4 +1,4 @@
-/* global Sanitize */
+import Sanitize from 'sanitize';
 
 function sanitizeElement(element, config) {
   var sanitizer = new Sanitize(config);
