@@ -53,7 +53,6 @@ You can then use this configuration by passing it in as the second argument to t
 * `git clone <repository-url>` this repository
 * `cd my-addon`
 * `npm install`
-* `bower install`
 
 ### Running
 
